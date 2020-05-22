@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_in">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logotext"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="19.7dp"
+        android:contentDescription="@string/logo_app" />
+
+    <Button
+        android:id="@+id/btn_loginFb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:background="@drawable/btn_fb"
+        android:layout_centerHorizontal="true"/>
+
+    <customfonts.MyTextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/or"
+        android:textSize="12sp"
+        android:layout_below="@id/btn_loginFb"
+        android:layout_centerInParent="true"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/or">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#a9aaac"
+            app:hintTextColor="#ea495f">
+
+            <customfonts.MyEditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="@string/username"
+                android:layout_marginLeft="46dp"
+                android:layout_marginRight="46dp"
+                android:textColorHint="#76818a"
+                android:textColor="#404547"
+                android:background="#0000"
+                android:padding="14dp"
+                android:inputType="textPersonName"
+                android:drawableStart="@drawable/ic_person_24px"
+                android:drawablePadding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginRight="56dp"
+            android:background="#ea495f"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:passwordToggleEnabled="true"
+            app:passwordToggleContentDescription="show"
+            app:passwordToggleDrawable="@drawable/state_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#a9aaac"
+            app:hintTextColor="#ea495f"
+            android:layout_marginTop="5dp">
+
+            <customfonts.MyEditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:layout_marginLeft="46dp"
+                android:layout_marginRight="46dp"
+                android:textColorHint="#76818a"
+                android:textColor="#404547"
+                android:background="#0000"
+                android:padding="14dp"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_lock_24px"
+                android:drawablePadding="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="56dp"
+            android:layout_marginRight="56dp"
+            android:background="#ea495f"/>
+
+        <customfonts.MyTextView
+            android:id="@+id/tv_forgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:gravity="right"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="56dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:background="@drawable/btn_sign_in"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:orientation="horizontal"
+        android:layout_marginTop="21dp"
+        android:gravity="center">
+
+        <customfonts.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_have_account"
+            android:textSize="12sp"/>
+
+        <customfonts.MyTextView
+            android:id="@+id/tv_signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:textSize="12sp"
+            android:textColor="#ea495f"
+            android:layout_marginStart="5dp"/>
+    </LinearLayout>
+</RelativeLayout>
